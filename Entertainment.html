@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital-Bolgs-Tech</title>
+        <!-- <-----------------Fontawesome Link--------------->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- <----------------Css Link--------------->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/Entertainment.css">
+        <!-- <-----------------Favicon Link--------------->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <!-- <-----------------Splider Link--------------->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/css/splide.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="auth-buttons">
+                <i class="fas fa-tachometer-alt aqi-icon" onclick="showPopup()" title="AQI"></i>
+            </div>
+            <div class="logo">
+                <h1>Digital<span>Blogs.</span></h1>
+            </div>
+            <div class="menu-icons">
+                <i class="fas fa-search" onclick="toggleSearch()"></i>
+                <i class="fas fa-user" onclick="toggleLoginForm()"></i>
+                <i class="fas fa-bars" onclick="toggleMenu()"></i>
+                <div id="menu" class="menu">
+                    <i class="fas fa-times" onclick="toggleMenu()"></i>
+                    <nav class="digital-navbar">
+                        <ul class="digital-navbar-list1">
+                            <li class="digital-navbar-item"><a href="index.html" class="digital-navbar-link ">Home</a></li>
+                            <li class="digital-navbar-item"><a href="news.html" class="digital-navbar-link">News</a></li>
+                            <li class="digital-navbar-item"><a href="Business.html" class="digital-navbar-link ">Business</a></li>
+                            <li class="digital-navbar-item"><a href="Technology.html" class="digital-navbar-link ">Technology</a></li>
+                            <li class="digital-navbar-item"><a href="Entertainment.html" class="digital-navbar-link active">Entertainment</a></li>
+                            <li class="digital-navbar-item"><a href="sports.html" class="digital-navbar-link ">Sports</a></li>
+                            <li class="digital-navbar-item"><a href="Health.html" class="digital-navbar-link">Health</a></li>
+                            <li class="digital-navbar-item"><a href="videos.html" class="digital-navbar-link ">Videos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+        <nav class="digital-navbar">
+            <ul class="digital-navbar-list">
+                <li class="digital-navbar-item"><a href="index.html" class="digital-navbar-link ">Home</a></li>
+                <li class="digital-navbar-item"><a href="news.html" class="digital-navbar-link">News</a></li>
+                <li class="digital-navbar-item"><a href="Business.html" class="digital-navbar-link ">Business</a></li>
+                <li class="digital-navbar-item"><a href="Technology.html" class="digital-navbar-link ">Technology</a></li>
+                <li class="digital-navbar-item"><a href="Entertainment.html" class="digital-navbar-link active">Entertainment</a></li>
+                <li class="digital-navbar-item"><a href="sports.html" class="digital-navbar-link ">Sports</a></li>
+                <li class="digital-navbar-item"><a href="Health.html" class="digital-navbar-link">Health</a></li>
+                <li class="digital-navbar-item"><a href="videos.html" class="digital-navbar-link ">Videos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="popup">
+        <span class="close-button">&times;</span>
+        <span class="date">Saturday, 17th Aug, 2024</span>
+        <div class="city">Loading...</div>
+        <div class="temperature">Loading...</div>
+        <div class="condition">Loading...</div>
+        <div class="aqi-section">
+            <span class="aqi">AQI: Loading...</span>
+            <div class="aqi-bar-container">
+                <div class="aqi-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notifications -->
+    <div class="toast success" id="toast-success">
+        <span class="close-button">&times;</span>
+        <div class="message">Location access granted.</div>
+    </div>
+
+    <div class="toast error" id="toast-error">
+        <span class="close-button">&times;</span>
+        <div class="message">An error occurred.</div>
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+    <div class="loader" id="loader">
+        <div class="loader" id="loader"></div>
+    </div>
+    <section class="news-section">
+        <h2>Entertainment News</h2>
+        <div class="news-grid1" id="news-grid1">
+            
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <h2>Subscribe to <br> <span>Our Newsletter</span></h2>
+            <form action="#">
+                <input type="email" placeholder="Mail">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Digital<span>Blogs.</span></h1>
+                <p>Our commitment to delivering accurate, timely, and insightful news is at the heart of everything we
+                    do. As you navigate through our content, we invite you to stay connected by subscribing to our
+                    newsletter, where we bring the headlines directly to you. Whether you're interested in the latest
+                    world events, technology trends, or sports highlights, our diverse range of coverage ensures there's
+                    something for everyone.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">Science</a></li>
+                        <li> <a href="#">Sports</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Lifestyle</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>About Us</h3>
+                    <ul>
+                        <li>Our Story</li>
+                        <li>Editorial Team</li>
+                        <li>Careers</li>
+                        <li>Advertise with Us</li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h3>Support</h3>
+                    <ul>
+                        <li>Help Center</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                        <li>Accessibility</li>
+                        <li>Cookie Policy</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>info@digitalblog.tech</li>
+                        <li>000 000 55 55</li>
+                        <li class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p>© 2024 DigitalBlogs, All Rights Reserved</p>
+    </footer>
+    
+</body>
+<script src="script.js"></script>
+
+</html>
