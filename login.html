@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       :root {
+        --white-color: #ffffff;
+        --primary-color: #333333;
+        --orange-color: #f57c00;
+        --black-color: #000000;
+        --background-color: #eeeeee;
+        --shadow-color: rgba(0, 0, 0, 0.2);
+    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f6f7fb;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: var(--orange-color);
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .back-button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container {
+            width: 80%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: row-reverse;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .login-left,
+        .login-right {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-left {
+            background-color: var(--orange-color);
+            color: white;
+            align-items: center;
+            text-align: center;
+        }
+
+        .login-illustration img {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .login-info h3 {
+            font-size: 22px;
+            margin: 0 0 10px;
+        }
+
+        .login-info p {
+            font-size: 16px;
+            color: #d1e8ff;
+            margin: 0;
+        }
+
+        .login-header img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .login-header h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .login-header p {
+            margin: 10px 0 20px;
+            color: #666;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .social-login button {
+            width: 48%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .google-btn {
+            background-color: white;
+            color: #333;
+        }
+
+        .facebook-btn {
+            background-color: var(--orange-color);
+            color: white;
+        }
+
+        .social-login i {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            color: #999;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .form-options label {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-options input {
+            margin-right: 10px;
+        }
+
+        .form-options a {
+            color: var(--orange-color);
+            text-decoration: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--orange-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: var(--orange-color);
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column-reverse;
+            }
+
+            .login-left,
+            .login-right {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .login-left {
+                padding: 20px 20px 40px;
+            }
+
+            .login-illustration img {
+                width: 60%;
+            }
+
+            .social-login {
+                flex-direction: column;
+            }
+
+            .social-login button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .divider {
+                margin: 10px 0;
+            }
+
+            .login-form input {
+                padding: 10px;
+            }
+
+            .login-btn {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <button class="back-button">&#8249; Back</button>
+    </nav>
+    <div class="login-container">
+        <div class="login-right">
+            <div class="login-header">
+                <img src="logo.png" alt="Digital Blogs." class="logo">
+                <h2>Log in to your Account</h2>
+                <p>Welcome back! Please choose a login method</p>
+            </div>
+            <div class="social-login">
+                <button class="google-btn"><i class="fa-brands fa-google"></i><span> Google</span></button>
+                <button class="facebook-btn"><i class="fa-brands fa-facebook"></i> Facebook</button>
+            </div>
+            <div class="divider">or continue with email</div>
+            <form class="login-form">
+                <input type="email" placeholder="Enter Email Id" required>
+                <input type="password" placeholder="Enter Password" required>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" checked> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="login-btn">Log in</button>
+            </form>
+            <div class="signup-link">
+                Don’t have an account? <a href="#">Create an account</a>
+            </div>
+        </div>
+        <div class="login-left">
+            <div class="login-illustration">
+                <img src="image/login-concept-illustration_.jpg" alt="Login Illustration">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
