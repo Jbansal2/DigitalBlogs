@@ -1,0 +1,123 @@
+/* <!-- <-----------------Pacifico-Fonts---------------> */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Tac+One&display=swap");
+/* <!-- <-----------------font-family: "Work Sans", sans-serif;-Fonts---------------> */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Tac+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* <!-- <-----------------font-family: Kanit-Fonts---------------> */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Tac+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f0f0;
+}
+:root {
+  --orange-color: #ff570a;
+  --secondary-color: #333;
+  --background-color: #f0f0f0;
+  --black-color: #000;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-bg-color: rgba(0, 0, 0, 0.1);
+  --dropdown-bg-color: #0b0b0b;
+  --primary-color: #333;
+  --white-color: #fff;
+  --text-color: #333;
+  --highlight-color: #007bff;
+}
+.fox-business-featured-news {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.fox-business-featured-news img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.fox-business-featured-news .fox-business-article-details {
+    max-width: 100%;
+}
+
+.fox-business-featured-news .fox-business-article-details p {
+    margin: 5px 0;
+}
+
+.fox-business-latest-news {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.fox-business-latest-news h2 {
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.fox-business-news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fox-business-news-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.fox-business-news-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.fox-business-news-item:hover {
+    transform: translateY(-5px);
+}
+
+.fox-business-news-item a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.fox-business-news-item a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .fox-business-featured-news {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .fox-business-featured-news img {
+        max-width: 200px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .fox-business-featured-news .fox-business-article-details {
+        max-width: 600px;
+    }
+
+    .fox-business-news-item {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .fox-business-news-item {
+        flex: 1 1 calc(25% - 20px);
+    }
+}

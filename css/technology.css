@@ -1,0 +1,97 @@
+/* <!-- <-----------------Pacifico-Fonts---------------> */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Tac+One&display=swap");
+/* <!-- <-----------------font-family: "Work Sans", sans-serif;-Fonts---------------> */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Tac+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* <!-- <-----------------font-family: Kanit-Fonts---------------> */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Tac+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0f0f0;
+}
+:root {
+  --orange-color: #ff570a;
+  --secondary-color: #333;
+  --background-color: #f0f0f0;
+  --black-color: #000;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-bg-color: rgba(0, 0, 0, 0.1);
+  --dropdown-bg-color: #0b0b0b;
+  --primary-color: #333;
+  --white-color: #fff;
+  --text-color: #333;
+  --highlight-color: #007bff;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.news-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-section h2 {
+    text-align: center;
+    color: var(--orange-color);
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: "Work Sans", sans-serif;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-item h3 {
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .news-section {
+        padding: 10px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-item h3 {
+        font-size: 16px;
+    }
+}
